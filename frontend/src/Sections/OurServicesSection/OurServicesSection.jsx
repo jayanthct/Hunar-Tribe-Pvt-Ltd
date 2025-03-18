@@ -6,10 +6,10 @@ import tyre from "../ImpactSection/Assets/tyre.svg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-
+import VerticalCarousel from "../VerticalCarousal/VerticalCarousal";
 
 const OurServicesSection = () => {
-  const slides = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
   const points = [
     "Lorem ipsum dolor sit amet consectetur mi ut.",
     "Sed do eiusmod tempor incididunt ut labore.",
@@ -17,7 +17,7 @@ const OurServicesSection = () => {
   ];
   return (
     <>
-      <section className="casestudy mb-20 mt-20 flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full">
+      <section className="service mb-20 mt-20 flex flex-col justify-center gap-8 overflow-y-clip items-center md:px-[8%] lg:px-[10%] px-[16px] w-full">
         <div className="leftcontent w-full flex justify-between items-end gap-4">
           <div className="text flex flex-col justify-start items-start gap-2">
             <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
@@ -76,8 +76,8 @@ const OurServicesSection = () => {
               </div>
             </div>
           </div>
-          <div className="rightcontent">{/* carousal */}
-            {/* <Carousel></Carousel> */}
+          <div className="rightcontent w-full">
+            <VerticalCarousel></VerticalCarousel>
           </div>
         </div>
       </section>
