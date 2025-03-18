@@ -5,7 +5,7 @@ import support from "./Assets/support.svg";
 import chevdown from "./Assets/chevdown.svg";
 import cart from "./Assets/cart.svg";
 
-import logo from "../../../public/logo.svg";
+import logo from "/src/Logo.svg";
 import NavButtons from "./Components/NavButtons";
 
 const NavBar = () => {
