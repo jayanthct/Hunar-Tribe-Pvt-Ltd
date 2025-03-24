@@ -10,7 +10,7 @@ const Advertisment = () => {
           <p className="text">+91-8000425929</p>
         </div>
         <div className="offer flex justify-center items-center gap-2">
-          <p className="text font-light text-neutral-200">Get 20% off on this Diwali 🎉 |</p>
+          <p className="text font-light text-neutral-200">Get 20% off on this Ugadi 🎉 |</p>
           <a href="#" className="link underline">
             Shop Now
           </a>

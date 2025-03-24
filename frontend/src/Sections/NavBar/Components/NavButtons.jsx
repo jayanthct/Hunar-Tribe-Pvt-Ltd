@@ -25,7 +25,7 @@ function NavButtons() {
   ];
 
   return (
-    <div className="flex justify-between items-center p-4 w-[60%]">
+    <div className="flex justify-between items-center px-4 py-2 w-[60%]">
       <ul className="flex justify-between w-full text-textprimary">
         {navItems.map((item) => (
           <li

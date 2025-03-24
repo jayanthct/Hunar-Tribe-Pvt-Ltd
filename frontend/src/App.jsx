@@ -5,20 +5,22 @@ import ProductSection from "./Sections/ProductSection/ProductSection";
 import ImpactSection from "./Sections/ImpactSection/ImpactSection";
 import OurServicesSection from "./Sections/OurServicesSection/OurServicesSection";
 import NavBar from "./Sections/NavBar/NavBar";
-import VerticalCarousel from "./Sections/VerticalCarousal/VerticalCarousal";
 import TeamSection from "./Sections/TeamSection/TeamSection";
+import HeroSection from "./Sections/HeroSection/HeroSection";
 
 function App() {
   return (
     <>
-      {/* <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
+      <HeroSection></HeroSection>
+
       <ImpactSection></ImpactSection>
 
-      <ProductSection></ProductSection> */}
+      <ProductSection></ProductSection>
       <TeamSection></TeamSection>
       <OurServicesSection></OurServicesSection>
-      {/* <OurVisionSection></OurVisionSection>
-      <TestimonialSection></TestimonialSection> */}
+      <OurVisionSection></OurVisionSection>
+      <TestimonialSection></TestimonialSection>
     </>
   );
 }
