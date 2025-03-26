@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import banner from "./Assets/banner.png";
+import banner1 from "./Assets/banner1.png";
+import banner2 from "./Assets/banner2.png";
+import banner3 from "./Assets/banner3.png";
 import Button from "../../Components/Button/Button";
 import { motion } from "framer-motion";
 
@@ -12,21 +15,20 @@ const slides = [
     buttonText: "Shop Now",
   },
   {
-    image: banner,
-    title: "Sustainable Planters",
+    image: banner1,
+    title: "Empowering Tribes",
     description:
-      "Enhance your space with eco-friendly and sustainable planters that make a difference.",
+      "Enhancing the local tribes to upskill their abilities to make difference.",
     buttonText: "Explore Now",
   },
   {
-    image: banner,
-    title: "Green Living Pots",
-    description:
-      "Discover beautiful pots crafted with love and care for your plants.",
-    buttonText: "View Collection",
+    image: banner2,
+    title: "Designing Model Anganvadi",
+    description: "Discover the new Generation Schools with our creativity.",
+    buttonText: "View Gallery",
   },
   {
-    image: banner,
+    image: banner3,
     title: "Handcrafted Decor",
     description:
       "Unique handcrafted pots to elevate your home and garden aesthetics.",
