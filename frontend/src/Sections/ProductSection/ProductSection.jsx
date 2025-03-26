@@ -3,8 +3,11 @@ import Button from "../../Components/Button/Button";
 import ProductCard from "./Components/ProductCard";
 import { FaSeedling, FaTree } from "react-icons/fa";
 
-import product1 from "./Assets/flower.png";
-import product2 from "./Assets/product.png";
+import product1 from "./Assets/1.png";
+import product2 from "./Assets/6.png";
+import product3 from "./Assets/3.png";
+import product4 from "./Assets/4.png";
+
 import ProductDropdown from "./Components/ProductDropdown";
 
 const ProductSection = () => {
@@ -40,11 +43,11 @@ const ProductSection = () => {
           </p>
         </div>
 
-        <div className="productcardsection flex w-full h-fit gap-4">
+        <div className="productcardsection grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 w-full h-fit gap-4">
           <ProductCard price={2999} img={product1}></ProductCard>
           <ProductCard price={1298} img={product2}></ProductCard>
-          <ProductCard price={1548} img={product1}></ProductCard>
-          <ProductCard price={2999} img={product2}></ProductCard>
+          <ProductCard price={1548} img={product3}></ProductCard>
+          <ProductCard price={2999} img={product4}></ProductCard>
         </div>
       </section>
     </>

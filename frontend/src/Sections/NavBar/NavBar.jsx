@@ -8,7 +8,7 @@ import logo from "/Logo.svg";
 import NavButtons from "./Components/NavButtons";
 
 const NavBar = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const NavBar = () => {
         }`}
       >
         <Advertisment />
-        <section className="navbar flex justify-between items-center md:px-[8%] lg:px-[10%] px-[16px] py-[2px] w-full border-b-[0.8px] border-b-[#6f746fce] bg-white cursor-pointer">
+        <section className="navbar flex justify-between items-center md:px-[8%] lg:px-[10%] px-[16px] w-full border-b-[0.8px] border-b-[#6f746fce] bg-white cursor-pointer">
           <div className="logo flex justify-center items-center cursor-pointer">
             <img src={logo} alt="" className="logo w-16" />
             <div className="text leading-tight flex flex-col justify-start items-start -ml-1">

@@ -56,7 +56,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-section h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[10%] relative mb-12 mt-12">
+    <section className="hero-section h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[10%] relative mb-12 mt-[200px]">
       <motion.div
         key={currentSlide}
         className="heroimage w-full h-full bg-cover bg-center bg-no-repeat flex justify-center items-start py-16 rounded-[16px]"
