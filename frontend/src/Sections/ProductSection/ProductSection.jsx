@@ -16,7 +16,7 @@ const ProductSection = () => {
 
   return (
     <>
-      <section className="testimonialsection flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
+      <section id="products" className="product flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
         <div className="text flex justify-between items-end w-full gap-2">
           <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
             Check out our&nbsp;

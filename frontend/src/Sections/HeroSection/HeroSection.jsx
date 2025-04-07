@@ -1,45 +1,40 @@
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import banner from "./Assets/banner.png";
 import banner1 from "./Assets/banner1.png";
 import banner2 from "./Assets/banner2.png";
 import banner3 from "./Assets/banner3.png";
+import banner4 from "./Assets/banner4.png";
 import Button from "../../Components/Button/Button";
-import { motion } from "framer-motion";
+import flower from "../TeamSection/Assets/flower.svg";
+
 
 const slides = [
   {
-    image: banner,
+    image: banner1,
     title: "Eco-Friendly Pots",
     description:
       "Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor sit tortor scelerisque nulla sed.",
     buttonText: "Shop Now",
   },
   {
-    image: banner1,
+    image: banner2,
     title: "Empowering Tribes",
     description:
       "Enhancing the local tribes to upskill their abilities to make difference.",
     buttonText: "Explore Now",
   },
   {
-    image: banner2,
+    image: banner3,
     title: "Designing Model Anganvadi",
     description: "Discover the new Generation Schools with our creativity.",
     buttonText: "View Gallery",
   },
   {
-    image: banner3,
+    image: banner4,
     title: "Handcrafted Decor",
     description:
       "Unique handcrafted pots to elevate your home and garden aesthetics.",
     buttonText: "Shop Handmade",
-  },
-  {
-    image: banner,
-    title: "Nature-Inspired Designs",
-    description:
-      "Bring nature closer with beautifully designed pots that blend with any decor.",
-    buttonText: "Buy Now",
   },
 ];
 
@@ -59,9 +54,20 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[10%] relative mb-12 mt-[200px]">
+      <img
+        src={flower}
+        alt=""
+        className="flower absolute bottom-0 left-[-12%] w-80 "
+      />
+      <img
+        src={flower}
+        alt=""
+        className="flower absolute right-[-12%] top-0 w-80"
+      />
+
       <motion.div
         key={currentSlide}
-        className="heroimage w-full h-full bg-cover bg-center bg-no-repeat flex justify-center items-start py-16 rounded-[16px]"
+        className="heroimage w-full h-full bg-cover bg-center bg-no-repeat flex justify-start items-center px-[10%] py-16 rounded-[16px]"
         style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
         }}
@@ -70,7 +76,7 @@ const HeroSection = () => {
         exit={{ x: -300, opacity: 0 }} // Slide to the left on exit
         transition={{ duration: 0.5 }}
       >
-        <div className="content text-center flex flex-col justify-center items-center gap-4">
+        <div className="content text-left flex flex-col justify-start items-start gap-4">
           <motion.h1
             className="text-[42px] tracking-tighter font-bold text-textprimary leading-[100%]"
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +88,7 @@ const HeroSection = () => {
               {slides[currentSlide].title.split(" ").slice(1).join(" ")}
             </span>
           </motion.h1>
-          <p className="text-textsecondary w-[48ch] leading-[130%]">
+          <p className="text-textsecondary w-[36ch] tracking-tight leading-[130%]">
             {slides[currentSlide].description}
           </p>
           <Button title={slides[currentSlide].buttonText} primary={true} />

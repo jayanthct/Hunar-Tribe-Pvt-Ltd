@@ -45,7 +45,7 @@ const OurClients = () => {
 
   return (
     <>
-      <section className="ourclients flex flex-col justify-center gap-6 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10 min-h-screen">
+      <section className="ourclients flex flex-col justify-center gap-6 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mb-10 mt-10">
         <div className="text flex flex-col justify-center items-center gap-2">
           <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
             Our&nbsp;

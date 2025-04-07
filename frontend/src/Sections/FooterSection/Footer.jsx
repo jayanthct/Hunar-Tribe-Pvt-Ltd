@@ -8,7 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Footer = () => {
   return (
     <>
-      <footer className="relative footersection bg-accent2 w-full flex flex-col justify-center items-center gap-6  md:px-[8%] lg:px-[10%] px-[16px] pt-[4%] pb-[2%] bottom-0 left-0">
+      <footer className="relative footersection bg-accent2  w-full flex flex-col justify-center items-center gap-6  md:px-[8%] lg:px-[10%] px-[16px] pt-[4%] pb-[2%]">
         <img
           src={tlogo}
           alt=""

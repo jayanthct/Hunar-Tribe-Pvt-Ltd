@@ -1,0 +1,6 @@
+.swiggybanner {
+  background: url("./Assets/banner.png");
+  background-size: cover; /* or contain, depending on your need */
+  background-position: center;
+  background-repeat: no-repeat;
+}

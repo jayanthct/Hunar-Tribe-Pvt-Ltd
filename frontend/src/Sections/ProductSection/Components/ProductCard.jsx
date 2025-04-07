@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPlus } from "react-icons/fa";
+import swiggymini from "../Assets/swiggymini.png";
 
 const ProductCard = ({ price, img }) => {
   return (
@@ -14,10 +14,9 @@ const ProductCard = ({ price, img }) => {
         <img src={img} alt="Product" className="w-full rounded-lg " />
       </div>
 
-      {/* Add to Cart Button (Hidden initially, slides in on hover) */}
-      <button className="cursor-pointer absolute bottom-6 right-4 w-[64px] h-[64px] flex items-center justify-center bg-accent3light text-accent1 rounded-full transform translate-x-[82px] group-hover:translate-x-0 transition-transform duration-300 ease-in-out">
-        <FaPlus className="text-xl" />
-      </button>
+      <div className="swiggylogo absolute bottom-6 right-4 w-[42px] h-[42px] flex items-center justify-center rounded-full overflow-clip">
+        <img src={swiggymini} alt="" className="swiggy" />
+      </div>
     </article>
   );
 };

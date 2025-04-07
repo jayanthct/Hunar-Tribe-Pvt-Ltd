@@ -33,7 +33,7 @@ const OurServicesSection = () => {
   };
 
   return (
-    <section className="service mb-20 mt-20 flex flex-col justify-center gap-8 overflow-y-clip items-start min-h-screen md:px-[8%] lg:px-[10%] px-[16px] w-full">
+    <section className="service flex flex-col justify-center gap-8 overflow-y-clip items-start min-h-screen md:px-[8%] lg:px-[10%] px-[16px] w-full">
       <div className="leftcontent w-full flex justify-between items-end gap-4">
         <div className="text flex flex-col justify-start items-start gap-2">
           <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">

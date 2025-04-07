@@ -4,7 +4,7 @@ import Button from "../Components/Button/Button";
 function PageNotFound404({description,img}) {
   return (
     <>
-      <section className="pagenotfound flex flex-col md:flex-row justify-center gap-8 bg-white items-center md:px-[8%] py-[4%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
+      <section className="pagenotfound flex flex-col md:flex-row justify-center gap-8 bg-white items-center md:px-[8%] py-[4%] lg:px-[10%] px-[16px] w-full mt-[10%]">
         <div className="textandbutton w-full flex flex-col justify-center items-center gap-8">
           <div className="text flex flex-col justify-center items-center w-full gap-2">
             <h1 className="text-[120px] md:text-[240px] tracking-tight text-accent1 font-bold leading-[100%]">

@@ -5,24 +5,20 @@ function NavButtons() {
   const [selected, setSelected] = useState(null);
 
   const navItems = [
-    {
-      name: "Products",
-      dropdown: [
-        "Lamps",
-        "Hanging Pots",
-        "Pots and Planters",
-        "Pen Stand",
-        "Key Holders",
-      ],
-    },
-    { name: "Services", dropdown: ["Consulting", "Support", "Installation"] },
-    { name: "Contact Us", dropdown: ["Email", "Phone", "Live Chat"] },
-    { name: "Gallery", dropdown: ["Photos", "Videos", "Virtual Tour"] },
-    {
-      name: "Track Order",
-      dropdown: ["Order Status", "Shipping Info", "Returns"],
-    },
+    { name: "Products", id: "products" },
+    { name: "Services", id: "services" },
+    { name: "Contact Us", id: "contact" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Track Order", id: "track-order" },
   ];
+
+  const handleScroll = (id) => {
+    setSelected(id);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex justify-center items-center px-4 py-1 w-[60%]">
@@ -30,36 +26,23 @@ function NavButtons() {
         {navItems.map((item) => (
           <li
             key={item.name}
-            className={`relative p-2 cursor-pointer text-textprimary hover:text-accent1 font-medium hover:font-semibold transition-all duration-300 ease-in-out`}
-            onMouseEnter={() => setHovered(item.name)}
+            className={`relative p-2 cursor-pointer text-textprimary transition-all duration-300 ease-in-out ${
+              selected === item.id
+                ? "text-accent1 font-semibold"
+                : "hover:text-accent1 hover:font-semibold"
+            }`}
+            onMouseEnter={() => setHovered(item.id)}
             onMouseLeave={() => setHovered(null)}
+            onClick={() => handleScroll(item.id)}
           >
             {item.name}
             <div
-              className={`absolute left-0 right-0 h-[2.4px] bg-accent1 rounded-full bottom-0 transition-transform duration-300 ease-in-out ${
-                hovered === item.name ? "scale-x-100" : "scale-x-0"
+              className={`absolute left-0 right-0 h-[2.4px] bg-accent1 rounded-full bottom-0 transition-transform duration-300 ease-in-out transform origin-left ${
+                hovered === item.id || selected === item.id
+                  ? "scale-x-100"
+                  : "scale-x-0"
               }`}
             />
-            {hovered === item.name && (
-              <ul className="absolute left-0 mt-4 w-60 bg-white shadow-lg rounded-[12px] border-2 border-[#6F746F4D] py-4 z-20">
-                {item.dropdown.map((subItem) => (
-                  <li
-                    key={subItem}
-                    onClick={() => setSelected(subItem)}
-                    className={`px-4 py-2 cursor-pointer transition-all flex items-center gap-2 ${
-                      selected === subItem
-                        ? "text-accent1 font-bold"
-                        : "font-normal hover:text-textprimary hover:font-semibold"
-                    }`}
-                  >
-                    {selected === subItem && (
-                      <div className="w-2 h-2 rounded-full bg-accent1"></div>
-                    )}
-                    {subItem}
-                  </li>
-                ))}
-              </ul>
-            )}
           </li>
         ))}
       </ul>
