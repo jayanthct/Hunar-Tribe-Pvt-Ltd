@@ -28,7 +28,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="testimonialsection flex md:flex-row flex-col justify-between gap-4 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full my-[10%]">
+    <section id="testimonials" className="testimonialsection flex md:flex-row flex-col justify-between gap-4 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full my-[10%]">
       <div className="leftcontent w-[40%] flex flex-col justify-start items-start gap-4">
         <div className="text flex flex-col justify-start items-start gap-2">
           <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">

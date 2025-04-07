@@ -9,7 +9,7 @@ function NavButtons() {
     { name: "Services", id: "services" },
     { name: "Contact Us", id: "contact" },
     { name: "Gallery", id: "gallery" },
-    { name: "Track Order", id: "track-order" },
+    { name: "Testimonials", id: "testimonials" },
   ];
 
   const handleScroll = (id) => {

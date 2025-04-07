@@ -46,7 +46,7 @@ const ImpactSection = () => {
 
   return (
     <>
-      <section className=" impact flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10">
+      <section className=" impact flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
         <div className="leftcontent w-full flex justify-between items-end gap-4">
           <div className="text flex flex-col justify-start items-start gap-2">
             <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
