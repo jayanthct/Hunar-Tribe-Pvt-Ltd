@@ -24,28 +24,40 @@ const GallerySection = () => {
         </div>
         <Button title="See All" />
       </div>
-      <div className="grid grid-cols-5 gap-4 p-4 max-w-screen-xl mx-auto">
-        {/* Left column - stacked vertically */}
-        <div className="col-span-2 flex flex-col gap-4">
-          <img src={img2} className="w-full h-full object-cover rounded-lg" />
-          <img src={img7} className="w-full h-full object-cover rounded-lg" />
+      <div className="grid grid-cols-5 grid-rows-3 gap-4 w-full">
+        {/* Image 1: spans 2 cols and 2 rows */}
+        <div className="col-span-2 row-span-2 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img2} alt="" className="image w-full h-full object-cover" />
         </div>
 
-        {/* Center image - large center focus */}
-        <div className="col-span-1 w-full flex items-center justify-center">
-          <img src={img3} className="w-full h-full object-cover rounded-lg" />
+        {/* Image 2: spans 2 cols and 3 rows */}
+        <div className="col-span-2 row-span-3 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img3} alt="" className="image w-full h-full object-cover" />
         </div>
 
-        {/* Right column - stacked vertically */}
-        <div className="col-span-2 flex flex-col gap-4">
-          <div className="flex gap-4 h-full">
-            <img src={img1} className="w-1/2 h-full object-cover rounded-lg" />
-            <img src={img5} className="w-1/2 h-full object-cover rounded-lg" />
-          </div>
-          <div className="flex gap-4 h-full">
-            <img src={img6} className="w-1/2 h-full object-cover rounded-lg" />
-            <img src={img4} className="w-1/2 h-full object-cover rounded-lg" />
-          </div>
+        {/* Image 3: 1 col, 1 row */}
+        <div className="col-span-1 row-span-1 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img1} alt="" className="image w-full h-full object-cover" />
+        </div>
+
+        {/* Image 4: 1 col, 1 row */}
+        <div className="col-span-1 row-span-1 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img4} alt="" className="image w-full h-full object-cover" />
+        </div>
+
+        {/* Image 5: 1 col, 1 row */}
+        <div className="col-span-1 row-span-1 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img5} alt="" className="image w-full h-full object-cover" />
+        </div>
+
+        {/* Image 6: 1 col, 1 row */}
+        <div className="col-span-1 row-span-1 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img6} alt="" className="image w-full h-full object-cover" />
+        </div>
+
+        {/* Image 7: 1 col, 1 row */}
+        <div className="col-span-1 row-span-1 bg-white flex items-center justify-center rounded-[8px] overflow-clip">
+          <img src={img7} alt="" className="image w-full h-full object-cover" />
         </div>
       </div>
     </section>

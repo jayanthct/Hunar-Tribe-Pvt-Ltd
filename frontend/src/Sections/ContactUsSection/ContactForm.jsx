@@ -46,11 +46,9 @@ const ContactForm = () => {
   ];
 
   const handleChange = (e) => {
-    const sanitized = DOMPurify.sanitize(e.target.value);
-    setFormData({
-      ...formData,
-      [e.target.name]: sanitized,
-    });
+    const { name, value } = e.target;
+    const sanitized = name === "message" ? DOMPurify.sanitize(value) : value;
+    setFormData((prev) => ({ ...prev, [name]: sanitized }));
   };
 
   const validate = () => {
@@ -89,10 +87,10 @@ const ContactForm = () => {
     try {
       await fetch(formUrl, {
         method: "POST",
-        mode: "no-cors",
-        body: formBody,
+        mode: "no-cors", // No response will be returned; can't verify success
+        body: formDataToSend,
       });
-      toast.success("Submitted Form Sucessfully, Our Team will Reach You");
+      toast.success("Submitted Form Successfully, Our Team will Reach You");
       handleClear();
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
