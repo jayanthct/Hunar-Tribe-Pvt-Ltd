@@ -2,6 +2,12 @@ import React from "react";
 import Button from "../Components/Button/Button";
 import BlogCard from "./Components/BlogCard";
 
+
+
+import blogimg1 from "./Assets/blogimg1.png";
+import blogimg2 from "./Assets/blogimg2.jpg";
+import blogimg3 from "./Assets/blogimg3.jpg";
+
 const BlogSection = () => {
   return (
     <>
@@ -19,10 +25,10 @@ const BlogSection = () => {
           <Button title="Read More" />
         </div>
 
-        <div className="gridsofblogs flex justify-center gap-12 items-center w-full">
-          <BlogCard></BlogCard>
-          <BlogCard></BlogCard>
-          <BlogCard></BlogCard>
+        <div className="gridsofblogs flex justify-center gap-4 items-center w-full">
+          <BlogCard img={blogimg1}></BlogCard>
+          <BlogCard img={blogimg2}></BlogCard>
+          <BlogCard img={blogimg3}></BlogCard>
         </div>
       </section>
     </>

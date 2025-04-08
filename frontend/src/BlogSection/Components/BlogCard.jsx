@@ -1,14 +1,18 @@
 import React from "react";
-import blogimg1 from "../Assets/blogimg1.png";
 import Button from "../../Components/Button/Button";
 
-const BlogCard = () => {
+const BlogCard = ({ img }) => {
   return (
     <>
       <article className="blog flex flex-col justify-start items-start gap-4 w-full">
-        <div className="blogimage w-full">
-          <img src={blogimg1} alt="" className="image rounded-[8px]" />
+        <div className="blogimage w-full h-[300px]">
+          <img
+            src={img}
+            alt=""
+            className="image w-full h-full object-cover rounded-[8px]"
+          />
         </div>
+
         <p className="titile font-medium tracking-tight leading-[120%] text-textprimary text-[24px]">
           Top-quality pots, vibrant and ever purchased!
         </p>
