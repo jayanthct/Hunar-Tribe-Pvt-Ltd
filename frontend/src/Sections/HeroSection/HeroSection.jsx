@@ -11,27 +11,27 @@ import flower from "../TeamSection/Assets/flower.svg";
 const slides = [
   {
     image: banner1,
-    title: "Eco-Friendly Pots",
+    title: "Designing Model Anganvadi",
     description:
       "Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor sit tortor scelerisque nulla sed.",
     buttonText: "Shop Now",
   },
   {
     image: banner2,
-    title: "Empowering Tribes",
+    title: "Handcrafted Decor",
     description:
       "Enhancing the local tribes to upskill their abilities to make difference.",
     buttonText: "Explore Now",
   },
   {
     image: banner3,
-    title: "Designing Model Anganvadi",
+    title: "Empowering Tribes",
     description: "Discover the new Generation Schools with our creativity.",
     buttonText: "View Gallery",
   },
   {
     image: banner4,
-    title: "Handcrafted Decor",
+    title: "Eco-Friendly Pots",
     description:
       "Unique handcrafted pots to elevate your home and garden aesthetics.",
     buttonText: "Shop Handmade",
@@ -91,7 +91,7 @@ const HeroSection = () => {
           <p className="text-textsecondary w-[36ch] tracking-tight leading-[130%]">
             {slides[currentSlide].description}
           </p>
-          <Button title={slides[currentSlide].buttonText} primary={true} />
+          <Button link={"https://hunartribe.mini.site/?path=%2F"} title={slides[currentSlide].buttonText} primary={true} />
         </div>
       </motion.div>
 

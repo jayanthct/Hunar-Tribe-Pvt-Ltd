@@ -30,13 +30,13 @@ const ProductSection = () => {
               iconselected={selectedIcon}
               seticonselected={setSelectedIcon}
             />
-            <Button primary title="Browse All"></Button>
+            <Button link={"https://hunartribe.mini.site/?path=%2F"} primary title="Browse All"></Button>
           </div>
         </div>
 
-        <div className="smallbanner w-full bg-accent1 h-[64px]">
+        {/* <div className="smallbanner w-full bg-accent1 h-[64px]">
 kasdk
-        </div>
+        </div> */}
 
         <div className="banner flex justify-baseline items-baseline gap-4">
           <div className="icon w-12 h-12 bg-accent3 rounded-full flex justify-center items-center">

@@ -42,7 +42,7 @@ const TestimonialSection = () => {
           </p>
         </div>
         <div className="allbuttons flex justify-start items-start w-full gap-8">
-          <Button primary>Shop Now</Button>
+          <Button link={"https://hunartribe.mini.site/?path=%2F"} primary>Shop Now</Button>
           <div className="buttonsrow flex justify-center items-center gap-4">
             <button
               onClick={handlePrev}
