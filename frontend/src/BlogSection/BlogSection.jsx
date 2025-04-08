@@ -26,9 +26,9 @@ const BlogSection = () => {
         </div>
 
         <div className="gridsofblogs flex justify-center gap-4 items-center w-full">
-          <BlogCard img={blogimg1}></BlogCard>
-          <BlogCard img={blogimg2}></BlogCard>
-          <BlogCard img={blogimg3}></BlogCard>
+          <BlogCard img={blogimg1} title={"Team spirit in action at the Zero Waste Learning Center!"}></BlogCard>
+          <BlogCard img={blogimg2} title={"Hands-on learning in progress at the Zero Waste Learning Center!"}></BlogCard>
+          <BlogCard img={blogimg3} title={"Building sustainability, one tire at a time!"}></BlogCard>
         </div>
       </section>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../Components/Button/Button";
 
-const BlogCard = ({ img }) => {
+const BlogCard = ({ img, title }) => {
   return (
     <>
       <article className="blog flex flex-col justify-start items-start gap-4 w-full">
@@ -14,7 +14,7 @@ const BlogCard = ({ img }) => {
         </div>
 
         <p className="titile font-medium tracking-tight leading-[120%] text-textprimary text-[24px]">
-          Top-quality pots, vibrant and ever purchased!
+          {title}
         </p>
         <div className="context flex -mt-1 gap-2 justify-start items-center w-full">
           <p className="type bg-accent3 px-4 py-1 rounded-full text-[14px] text-accent2 font-medium tracking-tight">
