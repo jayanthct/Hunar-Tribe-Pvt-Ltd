@@ -1,7 +1,6 @@
 import React from "react";
 import person1 from "./Assets/person1.png";
 import person2 from "./Assets/person2.png";
-
 import flower from "./Assets/flower.svg";
 
 const teamMembers = [
@@ -19,26 +18,31 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section className="team-section relative flex justify-center items-center flex-col gap-6 md:px-[8%] lg:px-[10%] px-[16px] w-full my-[10%]">
+    <section className="team-section relative flex justify-center items-center flex-col gap-6 md:px-[4%] lg:px-[10%] px-4 w-full my-[10%]">
+      
+      {/* Decorative Flowers - Hidden on Mobile */}
       <img
         src={flower}
         alt=""
-        className="flower absolute top-0 left-[-10%] w-80 "
+        className="flower absolute top-0 left-[-10%] w-80 hidden lg:block"
       />
       <img
         src={flower}
         alt=""
-        className="flower absolute right-[-10%] bottom-0 w-80"
+        className="flower absolute right-[-10%] bottom-0 w-80 hidden lg:block"
       />
 
+      {/* Heading */}
       <div className="text-center flex justify-center items-center flex-col gap-2">
-        <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+        <h1 className="text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
           Who <span className="text-accent1 font-bold">We</span> Are?
         </h1>
-        <p className="description text-textsecondary">
+        <p className="description text-textsecondary text-sm sm:text-base">
           Our Mission To Make A Difference
         </p>
       </div>
+
+      {/* Team Cards */}
       <div className="container flex items-center justify-center gap-6 w-full flex-col md:flex-row mt-4">
         {teamMembers.map((member, index) => (
           <div
@@ -54,6 +58,7 @@ const TeamSection = () => {
                 className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-72 h-72 object-contain"
               />
             </div>
+
             {/* Name and Role */}
             <div className="mt-3 flex flex-col justify-start items-start gap-1">
               <h3 className="text-2xl font-semibold text-accent2">

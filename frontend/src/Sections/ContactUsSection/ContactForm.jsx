@@ -110,7 +110,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full lg:w-1/2">
+    <form onSubmit={handleSubmit} className="w-full">
       <div className="space-y-4">
         {formFields.map(({ name, type, label, placeholder, required }) => (
           <div key={name}>

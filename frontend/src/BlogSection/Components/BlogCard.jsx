@@ -5,7 +5,7 @@ const BlogCard = ({ img, title }) => {
   return (
     <>
       <article className="blog flex flex-col justify-start items-start gap-4 w-full">
-        <div className="blogimage w-full h-[300px]">
+        <div className="blogimage w-full h-[200px] lg:h-[300px]">
           <img
             src={img}
             alt=""
@@ -13,7 +13,7 @@ const BlogCard = ({ img, title }) => {
           />
         </div>
 
-        <p className="titile font-medium tracking-tight leading-[120%] text-textprimary text-[24px]">
+        <p className="titile font-medium tracking-tight leading-[120%] text-textprimary text-[20px]">
           {title}
         </p>
         <div className="context flex -mt-1 gap-2 justify-start items-center w-full">

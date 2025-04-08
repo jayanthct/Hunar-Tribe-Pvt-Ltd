@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../../Components/Button/Button";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -9,7 +9,7 @@ import TestimonialPerson from "./TestimonialPerson";
 
 const comments = [
   "Top-quality pots, vibrant and shiny, the best I've ever purchased!",
-  "Absolutely love these plants! They bring life to my home very bright.",
+  "Absolutely love the pots! They bring life to my home very bright.",
   "Excellent customer service and beautiful products. Highly recommended!",
 ];
 
@@ -27,43 +27,61 @@ const TestimonialSection = () => {
     setIndex((prev) => (prev - 1 + comments.length) % comments.length);
   };
 
+  // 🔁 Auto change every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="testimonials" className="testimonialsection flex md:flex-row flex-col justify-between gap-4 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full my-[10%]">
-      <div className="leftcontent w-[40%] flex flex-col justify-start items-start gap-8">
-        <div className="text flex flex-col justify-start items-start gap-2">
-          <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
-            What Our&nbsp;
-            <br />
+    <section className="testimonialsection flex flex-col md:flex-row justify-between items-center gap-8 px-4 sm:px-6 md:px-[8%] lg:px-[10%] w-full my-[10%]">
+      
+      {/* Left Content (Hidden on mobile) */}
+      <div className="leftcontent hidden md:flex w-full md:w-[45%] flex-col justify-start items-start gap-8">
+        <div className="text flex flex-col gap-2">
+          <h1 className="text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+            What Our<br />
             <span className="font-bold text-accent1">Customer</span> Tell
           </h1>
-          <p className="description text-textsecondary leading-[120%]">
-            Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor
-            sit tortor scelerisque nulla sed.Lorem ipsum dscelerisque nulla sed.
+          <p className="text-textsecondary text-sm sm:text-base leading-[140%]">
+            Lorem ipsum Lorem ipsum scelerisque nulla sed.
           </p>
         </div>
-        <div className="allbuttons flex justify-start items-start w-full gap-8">
-          <Button link={"https://hunartribe.mini.site/?path=%2F"} primary>Shop Now</Button>
-          <div className="buttonsrow flex justify-center items-center gap-4">
+
+        <div className="allbuttons flex flex-col sm:flex-row gap-4 w-full sm:items-center">
+          <Button
+            link="https://hunartribe.mini.site/?path=%2F"
+            primary
+          >
+            Shop Now
+          </Button>
+
+          <div className="buttonsrow flex gap-4 mt-2 sm:mt-0">
             <button
               onClick={handlePrev}
-              className="chevrons w-[48px] h-[48px] flex justify-center items-center p-2 bg-background border-[1.4px] border-accent2 rounded-full hover:scale-[1.1] hover:bg-[#3f12120e] cursor-pointer ease-in transition-all"
+              className="chevrons w-12 h-12 flex justify-center items-center bg-background border border-accent2 rounded-full hover:scale-110 hover:bg-[#3f12120e] transition"
             >
               <FaChevronLeft size={16} className="text-accent2" />
             </button>
             <button
               onClick={handleNext}
-              className="chevrons w-[48px] h-[48px] flex justify-center items-center p-2 bg-background border-[1.4px] border-accent2 rounded-full hover:scale-[1.1] hover:bg-[#3f12120e] cursor-pointer ease-in transition-all"
+              className="chevrons w-12 h-12 flex justify-center items-center bg-background border border-accent2 rounded-full hover:scale-110 hover:bg-[#3f12120e] transition"
             >
               <FaChevronRight size={16} className="text-accent2" />
             </button>
           </div>
         </div>
       </div>
-      <div className="rightcontent w-[60%] flex flex-col justify-center gap-8 p-[64px] items-center bg-accent3light rounded-[16px] relative overflow-clip">
+
+      {/* Right Content */}
+      <div className="rightcontent w-full md:w-[55%] bg-accent3light rounded-2xl flex flex-col justify-center items-center gap-8 py-12 px-6 sm:px-8 md:px-12 relative overflow-hidden">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.p
             key={index}
-            className="comment text-[30px] w-[20ch] font-medium text-textprimary text-center tracking-tighter leading-[130%]"
+            className="text-center tracking-tight text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-medium text-textprimary leading-[130%] max-w-[20ch]"
             initial={{ opacity: 0, x: direction * 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -direction * 100 }}
@@ -72,16 +90,19 @@ const TestimonialSection = () => {
             “ {comments[index]} ”
           </motion.p>
         </AnimatePresence>
+
         <TestimonialPerson />
+
+        {/* Decorative Flowers */}
         <img
           src={flower}
           alt=""
-          className="images absolute left-[-32px] bottom-[-64px] w-[36%]"
+          className="absolute left-[-32px] bottom-[-64px] w-[36%] hidden sm:block"
         />
         <img
           src={hflower}
           alt=""
-          className="images absolute right-[-72px] top-[-72px]"
+          className="absolute right-[-72px] top-[-72px] w-[32%] hidden sm:block"
         />
       </div>
     </section>

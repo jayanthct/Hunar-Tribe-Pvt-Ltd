@@ -57,7 +57,9 @@ const ImpactSection = () => {
               Transforming Lives and Communities Through Innovation
             </p>
           </div>
-          <Button primary title="Join Us" />
+          <div className="mt-2 sm:mt-0 hidden lg:block">
+            <Button primary title="Join Us" />
+          </div>
         </div>
 
         {/* Grid Section */}

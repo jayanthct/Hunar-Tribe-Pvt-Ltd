@@ -30,11 +30,11 @@ const Contactus = () => {
           For Bulk orders or need a service
         </p>
       </div>
-      <div className="mt-8 w-full flex flex-col lg:flex-row gap-16 justify-between items-center">
+      <div className="mt-8 w-full flex flex-col lg:flex-row gap-6 lg:gap-16 justify-between items-center">
         <ContactForm />
 
         <ReactFlipCard
-          containerStyle={{ width: "50%", height: "100%" }}
+          containerStyle={{ width: "100%", height: "100%" }}
           frontStyle={{ width: "100%" }}
           backStyle={{ width: "100%" }}
           frontComponent={
