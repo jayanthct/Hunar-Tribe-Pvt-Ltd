@@ -61,7 +61,7 @@ const ImpactSection = () => {
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-3 gap-[20px] w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] w-full">
           {numbers.map((num, index) => (
             <ImpactCard
               key={index}

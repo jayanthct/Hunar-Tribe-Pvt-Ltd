@@ -34,6 +34,10 @@ const ProductSection = () => {
           </div>
         </div>
 
+        <div className="smallbanner w-full bg-accent1 h-[64px]">
+kasdk
+        </div>
+
         <div className="banner flex justify-baseline items-baseline gap-4">
           <div className="icon w-12 h-12 bg-accent3 rounded-full flex justify-center items-center">
             {selectedIcon}

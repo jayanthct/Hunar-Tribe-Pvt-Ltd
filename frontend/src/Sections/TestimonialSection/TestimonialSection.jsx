@@ -29,14 +29,14 @@ const TestimonialSection = () => {
 
   return (
     <section id="testimonials" className="testimonialsection flex md:flex-row flex-col justify-between gap-4 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full my-[10%]">
-      <div className="leftcontent w-[40%] flex flex-col justify-start items-start gap-4">
+      <div className="leftcontent w-[40%] flex flex-col justify-start items-start gap-8">
         <div className="text flex flex-col justify-start items-start gap-2">
           <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
             What Our&nbsp;
             <br />
             <span className="font-bold text-accent1">Customer</span> Tell
           </h1>
-          <p className="description text-textsecondary">
+          <p className="description text-textsecondary leading-[120%]">
             Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor
             sit tortor scelerisque nulla sed.Lorem ipsum dscelerisque nulla sed.
           </p>

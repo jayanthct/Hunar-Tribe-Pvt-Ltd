@@ -23,12 +23,12 @@ const LandingPage = () => {
       <SwiggyBanner></SwiggyBanner>
       <ProductSection></ProductSection>
       <OurServicesSection></OurServicesSection>
-      <ImpactSection></ImpactSection>
       <OurClients></OurClients>
+      <ImpactSection></ImpactSection>
       <OurVisionSection></OurVisionSection>
       <GallerySection></GallerySection>
-      <BlogSection></BlogSection>
       <TeamSection></TeamSection>
+      <BlogSection></BlogSection>
       <TestimonialSection></TestimonialSection>
       <InstagramPostSection></InstagramPostSection>
       <Contactus></Contactus>

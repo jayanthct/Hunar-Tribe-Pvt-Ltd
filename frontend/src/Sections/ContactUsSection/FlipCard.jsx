@@ -1,88 +1,95 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import arrow from "./arrow.svg";
+import whatsapp from "./whatsapp.svg";
+import pots from "./pots.png";
+
+import "./FlipCard.css";
 
 const FlipCard = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  const handleWhatsAppClick = (e) => {
+    e.stopPropagation(); // Prevents flip interference
+    window.open("https://wa.me/918000425929", "_blank");
+  };
 
   return (
     <div
-    //   className="relative w-full max-w-md perspective"
-      className="relative w-full lg:w-1/2 perspective"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      className="w-full md:w-[50%] aspect-[4/3] relative perspective-[1000px]"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <div
-        className={`relative duration-500 preserve-3d ${
-          isFlipped ? "rotate-y-180" : ""
-        }`}
-      >
-        {/* Front of card */}
-        <div className="backface-hidden w-full">
-          <div className="rounded-lg bg-accent3light p-6">
-            <img
-              src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Warehouse worker"
-              className="mb-6 rounded-lg object-cover w-full h-48"
-            />
-            <div className="space-y-2">
-              <h3 className="text-3xl font-bold">
-                Need <span className="text-[#FF8A00]">Bulk</span> In Orders?
-              </h3>
-              <p className="text-gray-600">
-                Don't Worry!
-                <br />
-                Just A Call We Will Reach You
-              </p>
-              <div className="flex items-center gap-2 text-green-500">
-                <i class="fa-regular fa-message"></i>
-                <span className="font-medium">Order Through Text!</span>
-              </div>
-              <div className="flex justify-end">
-                <i class="fa-solid fa-arrow-right text-[#FF8A00]"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Back of card */}
-        <div className="absolute backface-hidden w-full rotate-y-180 top-0">
-          <div className="rounded-lg bg-[#FFF9F0] p-6 h-full">
-            <div className="space-y-4">
-              <h3 className="text-3xl font-bold">
-                Our <span className="text-[#FF8A00]">Bulk</span> Order Process
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="rounded-full bg-[#FF8A00] px-2 py-1 text-xs text-white">
-                    1
-                  </span>
-                  <p>Contact us through the form or WhatsApp</p>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="rounded-full bg-[#FF8A00] px-2 py-1 text-xs text-white">
-                    2
-                  </span>
-                  <p>Share your requirements and quantity</p>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="rounded-full bg-[#FF8A00] px-2 py-1 text-xs text-white">
-                    3
-                  </span>
-                  <p>Get a customized quote within 24 hours</p>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="rounded-full bg-[#FF8A00] px-2 py-1 text-xs text-white">
-                    4
-                  </span>
-                  <p>Confirm your order and enjoy bulk benefits!</p>
-                </li>
-              </ul>
-              <div className="flex justify-end">
-                <i class="fa-solid fa-arrow-right text-[#FF8A00]"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AnimatePresence mode="wait">
+        {!hovered ? (
+          <motion.div
+            key="front"
+            initial={{ rotateY: 180 }}
+            animate={{ rotateY: 0 }}
+            exit={{ rotateY: 180 }}
+            transition={{ duration: 0.1, ease: "easeIn" }}
+            className="absolute w-full h-full rounded-[12px] backface-hidden preserve-3d"
+          >
+            <section className="flipcard flex flex-col justify-center items-center px-8 gap-6 py-8 bg-accent3light rounded-[12px] w-full h-full">
+              <img
+                src={pots}
+                alt="product"
+                className="heroimage w-full rounded-[16px]"
+              />
+              <article className="textandarrow flex justify-between items-center w-full">
+                <div className="textarea flex flex-col gap-2 w-full justify-start items-start">
+                  <p className="titile font-semibold text-[24px] sm:text-[28px] text-textprimary tracking-tight">
+                    Need <span className="text-accent1">Bulk</span> In Orders?
+                  </p>
+                  <p className="description text-[16px] -mt-1 mb-2 text-textsecondary">
+                    Don't worry! Just a Call we will reach you
+                  </p>
+                  <div className="whatsapp flex justify-center items-center gap-3 cursor-pointer">
+                    <img src={whatsapp} alt="whatsapp" className="w-10 h-10" />
+                    <p className="underline text-accent2 text-[16px] font-medium">
+                      Order Through Text!
+                    </p>
+                  </div>
+                </div>
+                <img src={arrow} alt="arrow" className="arrow w-6 h-6" />
+              </article>
+            </section>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="back"
+            initial={{ rotateY: -180 }}
+            animate={{ rotateY: 0 }}
+            exit={{ rotateY: -180 }}
+            transition={{ duration: 0.3, ease: "easeIn" }}
+            className="absolute w-full h-full rounded-[12px] backface-hidden preserve-3d cursor-pointer"
+          >
+            <button
+              onClick={handleWhatsAppClick}
+              className="flipcard flex flex-col justify-center items-center px-8 gap-6 py-8 bg-accent3light rounded-[12px] w-full h-full"
+            >
+              <img
+                src={pots}
+                alt="product"
+                className="heroimage w-full rounded-[16px]"
+              />
+              <article className="textandarrow flex justify-between items-center w-full">
+                <div className="textarea flex flex-col gap-3 w-full justify-center items-center">
+                  <div className="phonenumber font-bold text-white px-8 py-2 rounded-[16px] mb-2 text-[24px] sm:text-[32px] bg-[#10C625]">
+                    +91-8000425929
+                  </div>
+                  <div className="whatsapp flex justify-center items-center gap-3 cursor-pointer">
+                    <img src={whatsapp} alt="whatsapp" className="w-6 h-6" />
+                    <p className="underline text-textprimary text-[16px] font-medium">
+                      Start Messaging Now!
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

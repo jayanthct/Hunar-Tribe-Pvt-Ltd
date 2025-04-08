@@ -37,9 +37,7 @@ const OurVisionSection = () => {
           Agenda of the Hunar Tribe to make a difference
         </p>
       </div>
-
-      <article className="iconcards flex justify-center items-center w-full gap-4">
-        {/* Mapping over vision data */}
+      <article className="iconcards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4">
         {visionData.map((item, index) => (
           <div
             key={index}
