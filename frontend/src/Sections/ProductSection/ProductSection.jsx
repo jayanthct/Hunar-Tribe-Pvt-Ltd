@@ -17,13 +17,13 @@ const ProductSection = () => {
   return (
     <>
       <section id="products" className="product flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
-        <div className="text flex justify-between items-end w-full gap-2">
-          <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+        <div className="text flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-2">
+          <h1 className="text-[36px] lg:text-[48px] tracking-tighter text-textprimary font-medium leading-[120%]">
             Check out our&nbsp;
             <br />
             <span className="font-bold text-accent1">Products</span>
           </h1>
-          <div className="buttonrow flex justify-center items-center gap-4">
+          <div className="buttonrow flex self-center justify-center items-center gap-4">
             <ProductDropdown
               selected={selectedCategory}
               setSelected={setSelectedCategory}

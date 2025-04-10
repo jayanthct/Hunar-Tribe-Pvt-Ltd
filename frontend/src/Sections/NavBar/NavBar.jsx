@@ -59,11 +59,12 @@ const NavBar = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-
-            <Button
-              title={"Shop Now"}
-              link={"https://hunartribe.mini.site/?path=%2F"}
-            />
+            <div className="scale-[0.9]">
+              <Button
+                title={"Shop Now"}
+                link={"https://hunartribe.mini.site/?path=%2F"}
+              />
+            </div>
           </div>
         </section>
 

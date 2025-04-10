@@ -15,7 +15,7 @@ import Button from "../../Components/Button/Button";
 const slides = [
   {
     image: banner1,
-    simage: small1,
+    simage: small3,
     title: "Designing Model Anganvadi",
     description:
       "Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor sit tortor scelerisque nulla sed.",
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     image: banner3,
-    simage: small3,
+    simage: small1,
     title: "Empowering Tribes",
     description: "Discover the new Generation Schools with our creativity.",
     buttonText: "View Gallery",
