@@ -59,7 +59,7 @@ function NavButtons() {
                 "cursor-pointer relative",
                 selected === item.id || hovered === item.id
                   ? "font-semibold text-white"
-                  : "text-neutral-200 hover:text-white"
+                  : "text-white font-medium hover:text-white"
               )}
             >
               {item.name}
