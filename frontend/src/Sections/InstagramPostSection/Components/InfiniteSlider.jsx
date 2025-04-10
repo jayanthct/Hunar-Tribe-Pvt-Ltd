@@ -32,7 +32,7 @@ const InfiniteSlider = () => {
   }, []);
 
   return (
-    <article className="slider w-full p-6 bg-white rounded-[12px]">
+    <article className="slider w-full gap-2 p-6 bg-white rounded-[12px]">
       <Slider width={sliderWidth} duration={40} pauseOnHover={true}>
         {postid.map((post, index) => (
           <Slider.Slide key={index}>

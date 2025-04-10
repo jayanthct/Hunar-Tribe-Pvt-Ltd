@@ -2,23 +2,17 @@ import React from "react";
 
 const InstagramPost = ({ postid }) => {
   return (
-    <>
-      <div
-        className="overflow-clip"
-        style={{ maxWidth: "540px", margin: "0 auto" }}
-      >
-        <iframe
-          src={`https://www.instagram.com/p/${postid}/embed`}
-          width="100%"
-          height="400"
-          frameBorder="0"
-          scrolling="no"
-          allowTransparency="true"
-          allow="encrypted-media"
-          title="Instagram Post"
-        ></iframe>
-      </div>
-    </>
+    <div className="w-full max-w-[540px] h-[300px] md:h-[480px] mx-auto aspect-[4/5] sm:aspect-[1/1] overflow-hidden rounded-[8px]">
+      <iframe
+        src={`https://www.instagram.com/p/${postid}/embed`}
+        className="w-full h-full px-4"
+        frameBorder="0"
+        scrolling="no"
+        allowTransparency="true"
+        allow="encrypted-media"
+        title="Instagram Post"
+      ></iframe>
+    </div>
   );
 };
 

@@ -10,9 +10,9 @@ const BlogSection = () => {
   return (
     <section className="impact flex flex-col justify-between gap-8 items-center px-4 sm:px-6 md:px-[8%] lg:px-[10%] w-full my-12">
       {/* Top Header Section */}
-      <div className="leftcontent w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-        <div className="text flex flex-col justify-start items-start gap-2">
-          <h1 className="text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+      <div className="leftcontent w-full flex flex-col md:flex-row justify-between items-center lg:items-start md:items-end gap-4">
+        <div className="text flex flex-col justify-center items-center lg:justify-start lg:items-start gap-0 lg:gap-2">
+          <h1 className="text-[36px] lg:text-[48px] tracking-tighter text-textprimary font-medium leading-[120%]">
             Our Latest&nbsp;
             <span className="font-bold text-accent1">News</span>
           </h1>
@@ -35,7 +35,9 @@ const BlogSection = () => {
         />
         <BlogCard
           img={blogimg2}
-          title={"Hands-on learning in progress at the Zero Waste Learning Center!"}
+          title={
+            "Hands-on learning in progress at the Zero Waste Learning Center!"
+          }
         />
         <BlogCard
           img={blogimg3}

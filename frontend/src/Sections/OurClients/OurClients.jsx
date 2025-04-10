@@ -47,11 +47,11 @@ const OurClients = () => {
     <>
       <section className="ourclients flex flex-col justify-center gap-6 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-30">
         <div className="text flex flex-col justify-center items-center gap-2">
-          <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+          <h1 className="text-[36px] lg:text-[48px] tracking-tighter text-textprimary font-medium leading-[120%]">
             Our&nbsp;
             <span className="font-bold text-accent1">Clients</span>
           </h1>
-          <p className="description text-textsecondary">
+          <p className="description text-textsecondary text-center md:text-start">
             Agenda of the Hunar Tribe to make a difference
           </p>
         </div>

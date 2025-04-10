@@ -19,7 +19,6 @@ const teamMembers = [
 const TeamSection = () => {
   return (
     <section className="team-section relative flex justify-center items-center flex-col gap-6 md:px-[4%] lg:px-[10%] px-4 w-full my-[10%]">
-      
       {/* Decorative Flowers - Hidden on Mobile */}
       <img
         src={flower}
@@ -34,10 +33,10 @@ const TeamSection = () => {
 
       {/* Heading */}
       <div className="text-center flex justify-center items-center flex-col gap-2">
-        <h1 className="text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+        <h1 className="text-[36px] lg:text-[48px] tracking-tighter text-textprimary font-medium leading-[120%]">
           Who <span className="text-accent1 font-bold">We</span> Are?
         </h1>
-        <p className="description text-textsecondary text-sm sm:text-base">
+        <p className="description text-textsecondary sm:text-base">
           Our Mission To Make A Difference
         </p>
       </div>

@@ -48,12 +48,12 @@ const ImpactSection = () => {
     <>
       <section className=" impact flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
         <div className="leftcontent w-full flex justify-between items-end gap-4">
-          <div className="text flex flex-col justify-start items-start gap-2">
-            <h1 className="text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+          <div className="text flex flex-col lg:justify-start justify-center items-center lg:items-start gap-2">
+            <h1 className="text-[36px] lg:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
               Our&nbsp;
               <span className="font-bold text-accent1">Impact</span>
             </h1>
-            <p className="description text-textsecondary">
+            <p className="description text-textsecondary  text-center md:text-start">
               Transforming Lives and Communities Through Innovation
             </p>
           </div>

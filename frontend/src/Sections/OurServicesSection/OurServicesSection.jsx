@@ -38,11 +38,11 @@ const OurServicesSection = () => {
     >
       {/* Heading and Join Button */}
       <div className="leftcontent w-full flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-        <div className="text flex flex-col justify-start items-start gap-2">
-          <h1 className="text-[32px] md:text-[48px] tracking-tight text-textprimary font-medium leading-[120%]">
+        <div className="text flex flex-col justify-center items-center lg:justify-start lg:items-start gap-2">
+          <h1 className="text-[32px] md:text-[48px] tracking-tighter text-textprimary font-medium leading-[120%]">
             Our <span className="font-bold text-accent1">Services</span>
           </h1>
-          <p className="description text-textsecondary text-base md:text-lg">
+          <p className="description text-textsecondary  text-center md:text-start">
             Transforming Lives and Communities Through Innovation
           </p>
         </div>

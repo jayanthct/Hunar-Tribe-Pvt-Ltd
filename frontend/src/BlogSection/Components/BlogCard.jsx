@@ -4,7 +4,7 @@ import Button from "../../Components/Button/Button";
 const BlogCard = ({ img, title }) => {
   return (
     <>
-      <article className="blog flex flex-col justify-start items-start gap-4 w-full">
+      <article className="blog cursor-pointer hover:scale-[0.9] duration-100 ease-in transition-all flex flex-col justify-start items-start gap-4 w-full">
         <div className="blogimage w-full h-[200px] lg:h-[300px]">
           <img
             src={img}
