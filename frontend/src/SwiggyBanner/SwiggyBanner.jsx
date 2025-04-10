@@ -6,22 +6,44 @@ import "./SwiggyBanner.css";
 
 const SwiggyBanner = () => {
   return (
-    <section className="swiggybanner overflow-clip relative flex justify-center items-start flex-col gap-6 md:px-[8%] lg:px-[10%] lg:py-[6%] px-[16px] w-full my-[2%]">
-      <a target="_blank" href="https://hunartribe.mini.site/?path=%2F" className="sidecontent z-2 relative flex flex-col w-fit justify-center items-start gap-4">
-        <p className="heading font-medium tracking-tight text-accent2 text-[42px] leading-[120%]">
+    <section className="swiggybanner relative flex flex-col justify-center items-start gap-6 px-4 sm:px-8 md:px-[8%] lg:px-[10%] py-6 md:py-10 w-full h-[50%] lg:h-[60%] overflow-hidden my-[4%]">
+      {/* Content Link */}
+      <a
+        target="_blank"
+        href="https://hunartribe.mini.site/?path=%2F"
+        className="z-10 relative flex flex-col w-full sm:w-fit justify-center items-start gap-4"
+      >
+        {/* Heading */}
+        <p className="font-medium tracking-tighter text-accent2 text-[32px] sm:text-[36px] md:text-[42px] leading-tight">
           Get your First Order!
         </p>
-        <div className="tag bg-accent2 text-white px-8 py-2 flex justify-center items-center w-fit rounded-full">
+
+        {/* Tag */}
+        <div className="bg-accent2 text-white px-6 py-2 flex justify-center items-center w-fit rounded-full text-sm sm:text-base">
           Now Available At!
         </div>
-        <img src={swiggy} alt="" className="seiggyminis w-[50%]" />
+
+        {/* Swiggy Image */}
+        <img
+          src={swiggy}
+          alt="Swiggy"
+          className="w-[70%] sm:w-[50%] md:w-[40%] lg:w-[40%]"
+        />
+
+        {/* Arrow */}
         <img
           src={arrow}
-          alt=""
-          className="arrow absolute w-[24%] top-[16%] right-[20%]"
+          alt="Arrow"
+          className="absolute w-[20%] top-[24%] right-[10%] sm:left-[40%]"
         />
       </a>
-      <img src={blur} alt="" className="blur absolute z-0 top-[-8%] left-[-10%]" />
+
+      {/* Background Blur */}
+      <img
+        src={blur}
+        alt="Blur"
+        className="blur absolute  lg:top-[20%] lg:left-0 bottom-[10%] left-[4%] w-[150%] sm:w-[50%]"
+      />
     </section>
   );
 };
