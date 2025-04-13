@@ -16,15 +16,15 @@ const slides = [
   {
     image: banner1,
     simage: small3,
-    title: "Designing Model Anganvadi",
+    title: "Reimagining Early Childhood Spaces",
     description:
-      "Lorem ipsum dolor sit amet consectetur mi ut tortor bibendum auctor sit tortor scelerisque nulla sed.",
+      "Creative, colorful, and child-centric Anganwadis designed to spark curiosity and care.",
     buttonText: "Shop Now",
   },
   {
     image: banner2,
     simage: small2,
-    title: "Handcrafted Decor",
+    title: "Transforming Trash into Treasures",
     description:
       "Enhancing the local tribes to upskill their abilities to make difference.",
     buttonText: "Explore Now",
@@ -32,16 +32,25 @@ const slides = [
   {
     image: banner3,
     simage: small1,
-    title: "Empowering Tribes",
-    description: "Discover the new Generation Schools with our creativity.",
+    title: "From Margins to Makers",
+    description:
+      "Empowering tribal youth with skills, creativity, and opportunities to lead with purpose.",
     buttonText: "View Gallery",
   },
   {
     image: banner4,
     simage: small4,
-    title: "Eco-Friendly Pots",
+    title: "Unbreakable. Timeless. Tire Pots.",
     description:
-      "Unique handcrafted pots to elevate your home and garden aesthetics.",
+      "Redefining durability with sustainable design - handcrafted from reclaimed tires.",
+    buttonText: "Shop Handmade",
+  },
+  {
+    image: banner4,
+    simage: small4,
+    title: "Every Piece Tells a Story",
+    description:
+      "Unique decor handcrafted from scrap — sustainable, soulful, and full of character",
     buttonText: "Shop Handmade",
   },
 ];
@@ -73,11 +82,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero-section h-[86vh] md:h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[4%] relative mb-12 mt-[160px] md:mt-[200px]">
-      
+    <section className="hero-section h-[76vh] md:h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[4%] relative mb-4 mt-[160px] md:mt-[160px]">
       <motion.div
         key={currentSlide}
-        className="heroimage w-full h-full bg-cover bg-center bg-no-repeat flex justify-start items-center px-[10%] py-16 rounded-[16px]"
+        className="heroimage w-full h-full bg-cover bg-center bg-no-repeat flex justify-start items-center px-[6%] py-12 rounded-[16px]"
         style={{
           backgroundImage: `url(${backgroundImage})`,
         }}
@@ -88,17 +96,18 @@ const HeroSection = () => {
       >
         <div className="content self-start md:self-center w-full md:text-left flex flex-col justify-center items-center gap-4 md:items-start md:justify-start text-center">
           <motion.h1
-            className="text-[28px] md:text-[42px] tracking-tighter font-bold text-textprimary leading-[100%]"
+            className="text-[28px] md:text-[42px] tracking-tighter leading-[120%] font-bold text-textprimary"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             {slides[currentSlide].title.split(" ")[0]}{" "}
+            <br />
             <span className="text-accent1">
               {slides[currentSlide].title.split(" ").slice(1).join(" ")}
             </span>
           </motion.h1>
-          <p className="text-textsecondary w-[26ch] md:w-[36ch] tracking-tight leading-[130%]">
+          <p className="text-textsecondary w-[28ch] md:w-[36ch] tracking-tight leading-[130%]">
             {slides[currentSlide].description}
           </p>
           <Button

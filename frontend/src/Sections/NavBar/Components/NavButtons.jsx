@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // Using lucide icons
 import clsx from "clsx";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function NavButtons() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,18 +28,34 @@ function NavButtons() {
   return (
     <>
       {/* Hamburger menu - visible only on mobile */}
-      <div className="md:hidden flex justify-end items-center gap-2 px-4 py-2 w-full">
-        <p className="title font-medium text-[18px]">Menu</p>
-        <button onClick={() => setIsOpen(true)}>
-          <Menu className="w-10 h-10 text-textprimary" />
-        </button>
+      <div className="md:hidden flex justify-between items-center gap-2 px-4 py-2 w-full">
+        <div className="menubutton flex justify-center items-center gap-2">
+          <button onClick={() => setIsOpen(true)}>
+            <Menu className="w-10 h-10 text-accent2" />
+          </button>
+          <p className="title font-medium text-[18px] text-accent2">Menu</p>
+        </div>
+
+        <div className="flex justify-center gap-4 text-accent2 text-[20px] sm:text-[24px]">
+          <a href="#" className="hover:text-accent1">
+            <i className="fab fa-whatsapp"></i>
+          </a>
+          <a href="#" className="hover:text-accent1">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="#" className="hover:text-accent1">
+            <i className="far fa-envelope"></i>
+          </a>
+        </div>
       </div>
 
       {/* Full-screen overlay menu */}
       <div
         className={clsx(
           "fixed top-0 left-0 w-full h-screen bg-accent1 text-white z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out",
-          isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+          isOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
         )}
       >
         <button

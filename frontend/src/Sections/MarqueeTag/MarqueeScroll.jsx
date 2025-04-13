@@ -2,7 +2,7 @@ import React from "react";
 
 const MarqueeScroll = () => {
   return (
-    <section className="relative w-full bg-accent2 overflow-hidden py-4">
+    <section className="relative w-full  bg-accent2 overflow-hidden py-2">
       {/* Wrapper for positioning */}
       <div className="flex items-center justify-center gap-8 animate-marquee">
         {[...Array(2)].map((_, repeatIndex) =>
@@ -26,7 +26,7 @@ const MarqueeScroll = () => {
               key={`${repeatIndex}-${index}`}
               className="flex items-center justify-center gap-8"
             >
-              <span className="text-white text-lg">{item}</span>
+              <span className="text-white">{item}</span>
               <div className="w-2 h-2 bg-accent3 rounded-full"></div>
             </div>
           ))
