@@ -6,6 +6,9 @@ import ProductCard from "./Components/ProductCard";
 
 import ProductDropdown from "./Components/ProductDropdown";
 
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import {
   FaLightbulb,
   FaSeedling,
@@ -57,8 +60,10 @@ const ProductSection = () => {
   const [images, setImages] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedIcon, setSelectedIcon] = useState(<FaTree />);
+  const [loading, setLoading] = useState(false);
 
   const fetchImagesForCategory = async (category) => {
+    setLoading(true);
     setImages([]);
     if (!category) return;
 
@@ -72,6 +77,8 @@ const ProductSection = () => {
       }
     } catch (err) {
       console.error("Error fetching images", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -129,9 +136,17 @@ kasdk
         </div>
 
         <div className="productcardsection grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 w-full h-fit gap-4">
-          {images.map((img, index) => (
-            <ProductCard key={index} img={img} />
-          ))}
+          {loading
+            ? Array(4)
+                .fill(0)
+                .map((_, index) => (
+                  <div key={index} className="p-2">
+                    <Skeleton height={300} borderRadius={12} />
+                    <Skeleton height={20} className="mt-2" />
+                    <Skeleton height={20} width="60%" />
+                  </div>
+                ))
+            : images.map((img, index) => <ProductCard key={index} img={img} />)}
         </div>
       </section>
     </>
