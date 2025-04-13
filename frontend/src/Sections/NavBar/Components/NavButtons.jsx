@@ -37,13 +37,26 @@ function NavButtons() {
         </div>
 
         <div className="flex justify-center gap-4 text-accent2 text-[20px] sm:text-[24px]">
-          <a href="#" className="hover:text-accent1">
+          <a
+            target="_blank"
+            href="https://wa.me/919876543210"
+            className="hover:text-accent1"
+          >
             <i className="fab fa-whatsapp"></i>
           </a>
-          <a href="#" className="hover:text-accent1">
+
+          <a
+            target="_blank"
+            href="https://www.instagram.com/hunar_tribe_upcycles/"
+            className="hover:text-accent1"
+          >
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#" className="hover:text-accent1">
+          <a
+            target="_blank"
+            href="mailto:hunartribe@gmail.com"
+            className="hover:text-accent1"
+          >
             <i className="far fa-envelope"></i>
           </a>
         </div>

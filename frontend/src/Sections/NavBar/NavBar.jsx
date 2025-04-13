@@ -3,8 +3,8 @@ import Advertisment from "./Components/Advertisment";
 import Button from "../../Components/Button/Button";
 import logo from "/Logo.svg";
 import NavButtons from "./Components/NavButtons";
-import swiggymini from "../ProductSection/Assets/swiggymini.png";
 import { useNavigate } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -41,7 +41,10 @@ const NavBar = () => {
     >
       <Advertisment />
       <section className="navbar flex justify-between items-center md:px-[8%] lg:px-[10%] px-[16px] w-full border-b border-[#6f746fce] bg-white cursor-pointer">
-        <a href="/" className="logo flex justify-center items-center cursor-pointer w-fit py-2">
+        <a
+          href="/"
+          className="logo flex justify-center items-center cursor-pointer w-fit py-2"
+        >
           <img src={logo} alt="logo" className="w-14 md:w-16" />
 
           <div className="text leading-tight flex justify-center items-center mt-3">
@@ -56,12 +59,29 @@ const NavBar = () => {
         </a>
 
         <div className="buttonandmeta flex justify-between items-center gap-4">
-          <div className="hidden sm:flex w-[42px] h-[42px] items-center justify-center rounded-[12px] overflow-clip">
-            <img
-              src={swiggymini}
-              alt="Swiggy Mini Logo"
-              className="w-full h-full object-cover"
-            />
+          <div className="hidden md:flex justify-center gap-4 text-accent2 text-[20px] sm:text-[24px]">
+            <a
+              target="_blank"
+              href="https://wa.me/919876543210"
+              className="hover:text-accent1"
+            >
+              <i className="fab fa-whatsapp"></i>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.instagram.com/hunar_tribe_upcycles/"
+              className="hover:text-accent1"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              target="_blank"
+              href="mailto:hunartribe@gmail.com"
+              className="hover:text-accent1"
+            >
+              <i className="far fa-envelope"></i>
+            </a>
           </div>
           <div className="scale-[0.9]">
             <Button

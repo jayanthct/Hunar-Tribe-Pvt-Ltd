@@ -12,6 +12,7 @@ const ProductCard = ({ img }) => {
       <div className="w-full flex justify-center transition-transform duration-300 group-hover:scale-110">
         <img
           src={img}
+          loading="lazy"
           alt="Product"
           className="w-full object-cover scale-[1.1] md:scale-none"
         />
