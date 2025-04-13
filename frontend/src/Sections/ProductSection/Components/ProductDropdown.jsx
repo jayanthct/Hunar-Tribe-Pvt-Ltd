@@ -9,7 +9,10 @@ import {
   FaKey,
   FaCouch,
   FaIndustry,
-  FaKeycdn,
+  FaFeatherAlt,
+  FaPalette,
+  FaHome,
+  FaShapes,
 } from "react-icons/fa";
 
 const ProductDropdown = ({
@@ -19,24 +22,30 @@ const ProductDropdown = ({
   seticonselected,
 }) => {
   const categoryIcons = {
-    "Lamps": <FaLightbulb className="text-accent2" />,
-    "Hanging Pots": <FaSeedling className="text-accent2" />,
-    "Pots and Planters": <FaTree className="text-accent2" />,
-    "Pen Stand": <FaPencilAlt className="text-accent2" />,
-    "Key Holders": <FaKey className="text-accent2" />,
-    "Furniture & Outdoor": <FaCouch className="text-accent2" />,
-    "Metal Articles": <FaIndustry className="text-accent2" />,
-    "Key Chains": <FaKeycdn className="text-accent2" />,
+    "Art Mini Collection": <FaPalette className="text-accent2" />,
+    "Bird Collection": <FaFeatherAlt className="text-accent2" />,
+    "Black and White Collection": <FaShapes className="text-accent2" />,
+    "Boho Collection": <FaSeedling className="text-accent2" />,
+    "Feminine Collection": <FaPalette className="text-accent2" />,
+    "Hanging Pot Collection": <FaTree className="text-accent2" />,
+    "Trible Collection": <FaIndustry className="text-accent2" />,
+    "Whispering Petals Collection": <FaFeatherAlt className="text-accent2" />,
+    Lamps: <FaLightbulb className="text-accent2" />,
+    "Home Decor": <FaHome className="text-accent2" />,
+    Keychain: <FaKey className="text-accent2" />,
   };
+
   const categories = [
+    "Art Mini Collection",
+    "Bird Collection",
+    "Black and White Collection",
+    "Boho Collection",
+    "Feminine Collection",
+    "Hanging Pot Collection",
+    "Tribal Collection",
+    "Whispering Petals Collection",
     "Lamps",
-    "Hanging Pots",
-    "Pots and Planters",
-    "Pen Stand",
-    "Key Holders",
-    "Furniture & Outdoor",
-    "Metal Articles",
-    "Key Chains",
+    "Home Decor",
   ];
 
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility

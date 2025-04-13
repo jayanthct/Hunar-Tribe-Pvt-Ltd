@@ -15,7 +15,10 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY.current && currentScrollY - lastScrollY.current > 10) {
+      if (
+        currentScrollY > lastScrollY.current &&
+        currentScrollY - lastScrollY.current > 10
+      ) {
         // Scrolling down fast
         setShow(false);
       } else if (currentScrollY < lastScrollY.current) {
@@ -38,8 +41,9 @@ const NavBar = () => {
     >
       <Advertisment />
       <section className="navbar flex justify-between items-center md:px-[8%] lg:px-[10%] px-[16px] w-full border-b border-[#6f746fce] bg-white cursor-pointer">
-        <div className="logo flex justify-center items-center cursor-pointer w-fit py-2">
+        <a href="/" className="logo flex justify-center items-center cursor-pointer w-fit py-2">
           <img src={logo} alt="logo" className="w-14 md:w-16" />
+
           <div className="text leading-tight flex justify-center items-center mt-3">
             <p className="font-bold text-accent2 text-[24px] md:text-[32px] tracking-tighter">
               Hunar
@@ -49,7 +53,7 @@ const NavBar = () => {
               Tribe
             </p>
           </div>
-        </div>
+        </a>
 
         <div className="buttonandmeta flex justify-between items-center gap-4">
           <div className="hidden sm:flex w-[42px] h-[42px] items-center justify-center rounded-[12px] overflow-clip">

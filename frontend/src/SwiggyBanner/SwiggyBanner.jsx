@@ -6,7 +6,7 @@ import "./SwiggyBanner.css";
 
 const SwiggyBanner = () => {
   return (
-    <section className="swiggybanner relative flex flex-col justify-center items-start gap-6 px-4 sm:px-8 md:px-[8%] lg:px-[10%] py-6 md:py-10 w-full h-[50%] lg:h-[60%] overflow-hidden my-[2%]">
+    <section className="swiggybanner relative flex flex-col justify-center items-start gap-6 px-4 sm:px-8 md:px-[8%] lg:px-[10%] py-6 md:py-10 w-full h-[40vh] lg:h-[50vh] overflow-hidden my-[4%]">
       {/* Content Link */}
       <a
         target="_blank"
