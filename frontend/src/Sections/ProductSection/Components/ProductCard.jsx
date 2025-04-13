@@ -18,7 +18,7 @@ const ProductCard = ({ img }) => {
       </div>
 
       <button
-        className="shine-button absolute text-[14px] md:text-[16px] bottom-[6%] left-1/2 transform -translate-x-1/2 opacity-100 md:bottom-[-60px] md:opacity-0 md:group-hover:bottom-[8%] md:group-hover:opacity-100 bg-accent1 text-white font-medium tracking-tighter px-4 md:px-6 py-2 rounded-[8px] z-20 transition-all duration-500 ease-in-out overflow-hidden w-[80%]"
+        className="shine-button absolute text-[14px] md:text-[16px] bottom-[6%] left-1/2 transform -translate-x-1/2 opacity-100 md:bottom-[-60px] md:opacity-0 md:group-hover:bottom-[8%] md:group-hover:opacity-100 bg-accent1 text-white font-medium tracking-tighter px-4 md:px-6 py-2 rounded-[8px] transition-all duration-500 ease-in-out overflow-hidden w-[80%]"
         onClick={() => {
           window.open("https://hunartribe.mini.site/", "_blank");
         }}
