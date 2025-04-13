@@ -9,16 +9,47 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 const OurServicesSection = () => {
   const points = [
-    "Lorem ipsum dolor sit amet consectetur mi ut.",
-    "Sed do eiusmod tempor incididunt ut labore.",
-    "Ut enim ad minim veniam, quis nostrud exercitation.",
+    {
+      1: "Designing vibrant, child-friendly Anganwadi spaces using sustainable, upcycled materials.",
+      2: "Supporting early childhood development through creative and functional design.",
+      3: "Empowering communities with environmentally-conscious, impactful design solutions.",
+    },
+    {
+      1: "Crafting safe, eco-friendly playgrounds from discarded tyres",
+      2: "Promoting active play through joyful, upcycled designs.",
+      3: "Showcasing sustainability by transforming waste into wonder.",
+    },
+    {
+      1: "Transforming public spaces into creative, interactive wonders.",
+      2: "Using waste materials to design parks and gardens sustainably.",
+      3: "Inspiring awareness and eco-conscious living through design.",
+    },
+    {
+      1: "Establishing learning hubs focused on skill-building and sustainability.",
+      2: "Empowering youth and communities through hands-on eco education.",
+      3: "Promoting zero-waste living with practical, creative design.",
+    },
+    {
+      1: "Conducting immersive workshops to showcase the power of upcycling.",
+      2: "Engaging schools and communities in hands-on waste management activities.",
+      3: "Fostering creativity and eco-awareness through interactive learning.",
+    },
   ];
 
-  const titles = ["Tire Pots", "Model Anganvadi"];
-  const icon = [tyre, students];
+  const titles = [
+    "Building Model Anganwadi",
+    "Tyre-Based Playgrounds",
+    "Waste to Wonder Parks",
+    "Establishing Zero Waste Learning Centers",
+    "Upcycling & Sustainability Workshops",
+  ];
+  const icon = [tyre, students, students, students, students, students];
   const ytlink = [
-    "https://www.youtube.com/embed/aqu0kHP9knA?si=2PIbQzzy0APHrqXN",
     "https://www.youtube.com/embed/nD3oSBv7uxY?si=c-j80lQvQYNP96Kz",
+    "https://www.youtube.com/embed/69ZQsBC1fPU?si=iZ7GCh12OTfcTPDr",
+    "https://www.youtube.com/embed/1I2XiQ0TdLw?si=imgpkr9LBRko_dfR",
+    "https://www.youtube.com/embed/-J1DqW4nDyY?si=B_-PacTpPT_D-VEG",
+    "https://www.youtube.com/embed/mrXL-PceEyE?si=uStH6-k2-r1rZBZF",
   ];
 
   const [index, setIndex] = useState(0);
@@ -70,24 +101,24 @@ const OurServicesSection = () => {
                 className="icon w-[60%] h-[60%] scale-[0.8]"
               />
             </div>
-            <p className="heading font-bold text-[28px] md:text-[36px] text-accent2 tracking-tight">
+            <p className="heading font-bold text-[28px] md:text-[32px] text-accent2 tracking-tight">
               {titles[index]}
             </p>
           </motion.div>
 
           {/* Points List */}
           <div className="points flex flex-col justify-start items-start gap-2">
-            {points.map((text, i) => (
+            {Object.values(points[index]).map((point, i) => (
               <div
                 key={i}
-                className="point flex justify-center items-center gap-2"
+                className="point flex justify-start items-start gap-2"
               >
                 <FontAwesomeIcon
                   icon={faCircleCheck}
                   className="text-green-700 text-lg"
                 />
-                <p className="pointtext font-medium text-textsecondary text-[16px] md:text-[20px] tracking-tight">
-                  {text}
+                <p className="pointtext font-medium text-textprimary tracking-tight">
+                  {point}
                 </p>
               </div>
             ))}
@@ -96,7 +127,7 @@ const OurServicesSection = () => {
           {/* Buttons */}
           <div className="allbuttons flex flex-wrap justify-center items-center lg:justify-start lg:items-center w-full gap-3">
             <Button primary title="Contact Us" />
-            <Button title="See Samples" />
+            <Button title="Learn More" />
             <div className="buttonsrow flex justify-center items-center gap-2">
               <button
                 onClick={handlePrev}
