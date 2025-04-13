@@ -4,8 +4,11 @@ import Button from "../../Components/Button/Button";
 import logo from "/Logo.svg";
 import NavButtons from "./Components/NavButtons";
 import { useNavigate } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import {
+  BiLogoWhatsapp,
+  BiLogoLinkedin,
+  BiLogoInstagram,
+} from "react-icons/bi";
 const NavBar = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(true);
@@ -62,25 +65,29 @@ const NavBar = () => {
           <div className="hidden md:flex justify-center gap-4 text-accent2 text-[20px] sm:text-[24px]">
             <a
               target="_blank"
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918000425929"
               className="hover:text-accent1"
+              rel="noopener noreferrer"
             >
-              <i className="fab fa-whatsapp"></i>
+              <BiLogoWhatsapp size={24} />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/hunar-tribe/"
+              className="hover:text-accent1"
+              rel="noopener noreferrer"
+            >
+              <BiLogoLinkedin size={24} />
             </a>
 
             <a
               target="_blank"
               href="https://www.instagram.com/hunar_tribe_upcycles/"
               className="hover:text-accent1"
+              rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
-              target="_blank"
-              href="mailto:hunartribe@gmail.com"
-              className="hover:text-accent1"
-            >
-              <i className="far fa-envelope"></i>
+              <BiLogoInstagram size={24} />
             </a>
           </div>
           <div className="scale-[0.9]">

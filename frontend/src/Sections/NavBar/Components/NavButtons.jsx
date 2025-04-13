@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // Using lucide icons
 import clsx from "clsx";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import {
+  BiLogoWhatsapp,
+  BiLogoLinkedin,
+  BiLogoInstagram,
+} from "react-icons/bi";
 
 function NavButtons() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,25 +43,29 @@ function NavButtons() {
         <div className="flex justify-center gap-4 text-accent2 text-[20px] sm:text-[24px]">
           <a
             target="_blank"
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918000425929"
             className="hover:text-accent1"
+            rel="noopener noreferrer"
           >
-            <i className="fab fa-whatsapp"></i>
+            <BiLogoWhatsapp size={24} />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/hunar-tribe/"
+            className="hover:text-accent1"
+            rel="noopener noreferrer"
+          >
+            <BiLogoLinkedin size={24} />
           </a>
 
           <a
             target="_blank"
             href="https://www.instagram.com/hunar_tribe_upcycles/"
             className="hover:text-accent1"
+            rel="noopener noreferrer"
           >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            target="_blank"
-            href="mailto:hunartribe@gmail.com"
-            className="hover:text-accent1"
-          >
-            <i className="far fa-envelope"></i>
+            <BiLogoInstagram size={24} />
           </a>
         </div>
       </div>

@@ -3,7 +3,11 @@ import FooterButtons from "./Components/FooterButtons";
 import logo from "/footerlogo.svg";
 import tlogo from "/transparent.svg";
 import arrow from "./arrow.svg";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import {
+  BiLogoWhatsapp,
+  BiLogoLinkedin,
+  BiLogoInstagram,
+} from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -57,14 +61,31 @@ const Footer = () => {
           </button>
 
           <div className="flex justify-center gap-4 text-white text-[20px] sm:text-[24px] -mt-4">
-            <a href="#" className="hover:text-accent1">
-              <i className="fab fa-whatsapp"></i>
+            <a
+              target="_blank"
+              href="https://wa.me/918000425929"
+              className="hover:text-accent1"
+              rel="noopener noreferrer"
+            >
+              <BiLogoWhatsapp size={24} />
             </a>
-            <a href="#" className="hover:text-accent1">
-              <i className="fab fa-instagram"></i>
+
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/hunar-tribe/"
+              className="hover:text-accent1"
+              rel="noopener noreferrer"
+            >
+              <BiLogoLinkedin size={24} />
             </a>
-            <a href="#" className="hover:text-accent1">
-              <i className="far fa-envelope"></i>
+
+            <a
+              target="_blank"
+              href="https://www.instagram.com/hunar_tribe_upcycles/"
+              className="hover:text-accent1"
+              rel="noopener noreferrer"
+            >
+              <BiLogoInstagram size={24} />
             </a>
           </div>
 
