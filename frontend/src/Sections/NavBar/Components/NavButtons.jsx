@@ -24,7 +24,11 @@ function NavButtons() {
     setSelected(id);
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -180; // Adjust this value to suit your header height
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
     setIsOpen(false); // close menu after click
   };

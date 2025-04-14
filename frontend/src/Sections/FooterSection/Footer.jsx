@@ -10,6 +10,28 @@ import {
 } from "react-icons/bi";
 
 const Footer = () => {
+  const item1 = [
+    { name: "Products", id: "products" },
+    { name: "Services", id: "services" },
+    { name: "Contact Us", id: "contact" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Testimonials", id: "testimonials" },
+  ];
+  const item2 = [
+    { name: "Products", id: "products" },
+    { name: "Services", id: "services" },
+    { name: "Contact Us", id: "contact" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Testimonials", id: "testimonials" },
+  ];
+  const item3 = [
+    { name: "Products", id: "products" },
+    { name: "Services", id: "services" },
+    { name: "Contact Us", id: "contact" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Testimonials", id: "testimonials" },
+  ];
+
   return (
     <>
       <footer className="relative footersection bg-accent2 w-full flex flex-col justify-center items-center gap-6 md:px-[8%] lg:px-[10%] px-[16px] pt-[4%] pb-[2%] overflow-hidden">
@@ -41,9 +63,9 @@ const Footer = () => {
           </div>
 
           <div className="buttonsfooter grid grid-cols-2 sm:grid-cols-3 gap-4 w-full sm:w-[55%]">
-            <FooterButtons />
-            <FooterButtons />
-            <FooterButtons />
+            <FooterButtons item={item1} heading={"Useful Links"} />
+            <FooterButtons item={item1} heading={"Useful Links"} />
+            <FooterButtons item={item1} heading={"Useful Links"} />
           </div>
         </div>
 
