@@ -1,15 +1,15 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import FlipCard from "./FlipCard";
 import ReactFlipCard from "reactjs-flip-card";
 
 import arrow from "./arrow.svg";
 import whatsapp from "./whatsapp.svg";
 import pots from "./pots.png";
+import potsback from "./potsback.png";
 
 const handleWhatsAppClick = (e) => {
   e.stopPropagation(); // Prevents flip interference
-  window.open("https://wa.me/918000425929", "_blank");
+  window.open("https://wa.me/918000425929", "_blank", "noopener noreferrer");
 };
 
 const styles = {
@@ -69,7 +69,7 @@ const Contactus = () => {
               className="flipcard cursor-pointer flex flex-col justify-center items-center px-8 gap-6 py-8 bg-accent3light rounded-[12px] w-full h-full"
             >
               <img
-                src={pots}
+                src={potsback}
                 alt="product"
                 className="heroimage w-full rounded-[16px]"
               />
@@ -79,7 +79,11 @@ const Contactus = () => {
                     +91-8000425929
                   </div>
                   <div className="whatsapp flex justify-center items-center gap-3 cursor-pointer">
-                    <img src={whatsapp} alt="whatsapp" className="arrow w-10 h-10" />
+                    <img
+                      src={whatsapp}
+                      alt="whatsapp"
+                      className="arrow w-10 h-10"
+                    />
                     <p className="underline text-textprimary text-[16px] font-medium">
                       Start Messaging Now!
                     </p>

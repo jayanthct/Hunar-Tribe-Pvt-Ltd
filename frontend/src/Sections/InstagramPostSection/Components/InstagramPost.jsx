@@ -6,9 +6,6 @@ const InstagramPost = ({ postid }) => {
       <iframe
         src={`https://www.instagram.com/p/${postid}/embed`}
         className="w-full h-full px-4"
-        frameBorder="0"
-        scrolling="no"
-        allowTransparency="true"
         allow="encrypted-media"
         title="Instagram Post"
       ></iframe>

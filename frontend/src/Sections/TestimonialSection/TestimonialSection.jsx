@@ -57,7 +57,10 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="testimonialsection flex flex-col md:flex-row justify-between items-center gap-8 px-4 sm:px-6 md:px-[8%] lg:px-[10%] w-full my-[10%]">
+    <section
+      id="testimonials"
+      className="testimonialsection flex flex-col md:flex-row justify-between items-center gap-8 px-4 sm:px-6 md:px-[8%] lg:px-[10%] w-full my-[10%]"
+    >
       {/* Left Content (Hidden on mobile) */}
       <div className="leftcontent hidden md:flex w-full md:w-[45%] flex-col justify-start items-start gap-8">
         <div className="text flex flex-col gap-2">
