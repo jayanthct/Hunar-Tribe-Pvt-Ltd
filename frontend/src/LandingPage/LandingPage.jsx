@@ -9,7 +9,7 @@ import TeamSection from "../Sections/TeamSection/TeamSection";
 import HeroSection from "../Sections/HeroSection/HeroSection";
 import OurClients from "../Sections/OurClients/OurClients";
 import InstagramPostSection from "../Sections/InstagramPostSection/InstagramPostSection";
-import BlogSection from "../BlogSection/BlogSection";
+import BlogSection from "../Sections/BlogSection/BlogSection";
 import Contactus from "../Sections/ContactUsSection/ContactUsSection";
 import GallerySection from "../Sections/GallerySection/GallerySection";
 import MarqueeScroll from "../Sections/MarqueeTag/MarqueeScroll";

@@ -1,6 +1,6 @@
 import React from "react";
-import person1 from "./Assets/person1.png";
-import person2 from "./Assets/person2.png";
+import person1 from "./Assets/person1.webp";
+import person2 from "./Assets/person2.webp";
 import flower from "./Assets/flower.svg";
 
 const teamMembers = [
