@@ -32,6 +32,17 @@ const Footer = () => {
     { name: "Testimonials", id: "testimonials" },
   ];
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const yOffset = -200; // Adjust this value to suit your header height
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <footer className="relative footersection bg-accent2 w-full flex flex-col justify-center items-center gap-6 md:px-[8%] lg:px-[10%] px-[16px] pt-[4%] pb-[2%] overflow-hidden">
@@ -70,7 +81,10 @@ const Footer = () => {
         </div>
 
         <div className="bottom flex flex-col w-full justify-center items-center gap-6">
-          <button className="letstalk self-start bg-accent1 px-[12px] py-2 flex flex-col justify-center items-start rounded-[4px] cursor-pointer w-fit hover:scale-[0.9] transition-all duration-150 ease-in">
+          <button
+            onClick={() => handleScroll("contact")}
+            className="letstalk self-start bg-accent1 px-[12px] py-2 flex flex-col justify-center items-start rounded-[4px] cursor-pointer w-fit hover:scale-[0.9] transition-all duration-150 ease-in"
+          >
             <p className="description text-white opacity-80 mt-2 leading-[120%]">
               Need a Service ?
             </p>

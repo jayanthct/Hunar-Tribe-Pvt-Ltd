@@ -11,7 +11,7 @@ import img7 from "./Assets/img7.png";
 
 const GallerySection = () => {
   return (
-    <section className="product flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
+    <section id="gallery" className="product flex flex-col justify-between gap-8 items-center md:px-[8%] lg:px-[10%] px-[16px] w-full mt-10 mb-10">
       {/* Heading and Button */}
       <div className="leftcontent w-full flex justify-between items-end gap-4 flex-wrap">
         <div className="text flex flex-col justify-center items-center md:justify-start md:items-start gap-2">
