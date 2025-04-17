@@ -114,12 +114,16 @@ const ContactForm = () => {
       <div className="space-y-4">
         {formFields.map(({ name, type, label, placeholder, required }) => (
           <div key={name}>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor={name}
+              className="block text-sm font-medium text-gray-700"
+            >
               {label}
               {required && <span className="text-red-500"> *</span>}
             </label>
             {type === "textarea" ? (
               <textarea
+                id={name}
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
@@ -129,6 +133,7 @@ const ContactForm = () => {
               />
             ) : (
               <input
+                id={name}
                 type={type}
                 name={name}
                 value={formData[name]}
@@ -136,6 +141,7 @@ const ContactForm = () => {
                 className="mt-1 w-full rounded-md border px-3 py-2 focus:border-accent1 focus:outline-none focus:ring-1 focus:ring-accent1"
                 placeholder={placeholder}
                 required={required}
+                autocomplete="email"
               />
             )}
             {errors[name] && (

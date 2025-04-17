@@ -23,7 +23,7 @@ const FooterButtons = ({ item, heading }) => {
       <ul className="flex flex-col gap-1 text-white">
         {item.map((item) => (
           <li
-            key={item.id}
+            key={item.name}
             onClick={() => handleClick(item.id)}
             className="hover:underline cursor-pointer"
           >
