@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Button from "../../Components/Button/Button";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import flower from "./Assets/flower.png";
-import hflower from "./Assets/hangingflower.png";
+import flower from "./Assets/flower.webp";
+import hflower from "./Assets/flower2.webp";
 import TestimonialPerson from "./TestimonialPerson";
 
 const comments = [
@@ -51,7 +51,7 @@ const TestimonialSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -123,12 +123,12 @@ const TestimonialSection = () => {
         <img
           src={flower}
           alt=""
-          className="absolute left-[-32px] bottom-[-64px] w-[36%] hidden sm:block"
+          className="absolute left-[-14%] bottom-[-8%]  w-[36%] hidden sm:block"
         />
         <img
           src={hflower}
           alt=""
-          className="absolute right-[-72px] top-[-72px] w-[32%] hidden sm:block"
+          className="absolute right-[-14%] bottom-[-8%] w-[36%] hidden sm:block"
         />
       </div>
     </section>
