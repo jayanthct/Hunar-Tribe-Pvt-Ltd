@@ -1,14 +1,19 @@
 import React from "react";
 
 const FooterButtons = ({ item, heading }) => {
-  const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      const yOffset = -200; // Adjust this value to suit your header height
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
+  const handleClick = (id) => {
+    // If it starts with "http" or "/", treat it as a link
+    if (id.startsWith("https") || id.startsWith("/")) {
+      window.open(id, "_blank", "noopener,noreferrer");
+    } else {
+      // Otherwise scroll to the section
+      const section = document.getElementById(id);
+      if (section) {
+        const yOffset = -200; // Adjust this if you have a sticky header
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
   };
 
@@ -19,7 +24,7 @@ const FooterButtons = ({ item, heading }) => {
         {item.map((item) => (
           <li
             key={item.id}
-            onClick={() => handleScroll(item.id)}
+            onClick={() => handleClick(item.id)}
             className="hover:underline cursor-pointer"
           >
             {item.name}

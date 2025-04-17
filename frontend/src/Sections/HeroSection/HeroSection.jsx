@@ -6,10 +6,11 @@ import banner3 from "./Assets/banner3.webp";
 import banner4 from "./Assets/banner4.webp";
 import banner5 from "./Assets/banner5.webp";
 
-import small1 from "./Assets/small1.png";
-import small2 from "./Assets/small2.png";
-import small3 from "./Assets/small3.png";
-import small4 from "./Assets/small4.png";
+import small1 from "./Assets/small1.webp";
+import small2 from "./Assets/small2.webp";
+import small3 from "./Assets/small3.webp";
+import small4 from "./Assets/small4.webp";
+import small5 from "./Assets/small5.webp";
 
 import Button from "../../Components/Button/Button";
 
@@ -58,7 +59,7 @@ const HeroSection = () => {
     },
     {
       image: banner5,
-      simage: small4,
+      simage: small5,
       title: "Every Piece Tells a Story",
       description:
         "Unique decor handcrafted from scrap — sustainable, soulful, and full of character",
@@ -73,7 +74,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3500);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -85,7 +86,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero-section h-[76vh] md:h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[4%] relative mb-4 mt-[160px] md:mt-[160px]">
+    <section className="hero-section h-[80vh] md:h-[68vh] flex flex-col justify-center items-center w-full px-[16px] md:px-[4%] relative mb-4 mt-[160px] md:mt-[160px]">
       {loading ? (
         <Skeleton height="100%" width="100%" />
       ) : (

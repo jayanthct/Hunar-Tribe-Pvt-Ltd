@@ -1,6 +1,13 @@
 .swiggybanner {
-  background: url("./Assets/banner.png");
+  background: url("./Assets/banner.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .swiggybanner {
+    background-image: url("./Assets/mobilebanner.webp");
+  }
 }

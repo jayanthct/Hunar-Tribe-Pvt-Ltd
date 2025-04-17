@@ -18,18 +18,22 @@ const Footer = () => {
     { name: "Testimonials", id: "testimonials" },
   ];
   const item2 = [
-    { name: "Products", id: "products" },
-    { name: "Services", id: "services" },
-    { name: "Contact Us", id: "contact" },
-    { name: "Gallery", id: "gallery" },
-    { name: "Testimonials", id: "testimonials" },
+    {
+      name: "Shipping & Returns",
+      id: "https://hunartribe.mini.site/?path=%2F",
+    },
+    {
+      name: "Track Your Order",
+      id: "https://hunartribe.mini.site/?path=%2F",
+    },
+    { name: "Payment Options", id: "https://hunartribe.mini.site/?path=%2F" },
+    { name: "FAQs", id: "https://hunartribe.mini.site/?path=%2F" },
   ];
   const item3 = [
-    { name: "Products", id: "products" },
-    { name: "Services", id: "services" },
-    { name: "Contact Us", id: "contact" },
-    { name: "Gallery", id: "gallery" },
-    { name: "Testimonials", id: "testimonials" },
+    { name: "Join Us", id: "https://hunartribe.mini.site/?path=%2F" },
+    { name: "Press & Media", id: "https://hunartribe.mini.site/?path=%2F" },
+    { name: "Blogs", id: "https://hunartribe.mini.site/?path=%2F" },
+    { name: "Privacy Policy", id: "https://hunartribe.mini.site/?path=%2F" },
   ];
 
   const handleScroll = (id) => {
@@ -75,15 +79,15 @@ const Footer = () => {
 
           <div className="buttonsfooter grid grid-cols-2 sm:grid-cols-3 gap-4 w-full sm:w-[55%]">
             <FooterButtons item={item1} heading={"Useful Links"} />
-            <FooterButtons item={item1} heading={"Useful Links"} />
-            <FooterButtons item={item1} heading={"Useful Links"} />
+            <FooterButtons item={item2} heading={"Help Center"} />
+            <FooterButtons item={item3} heading={"About Us"} />
           </div>
         </div>
 
         <div className="bottom flex flex-col w-full justify-center items-center gap-6">
           <button
             onClick={() => handleScroll("contact")}
-            className="letstalk self-start bg-accent1 px-[12px] py-2 flex flex-col justify-center items-start rounded-[4px] cursor-pointer w-fit hover:scale-[0.9] transition-all duration-150 ease-in"
+            className="letstalk self-start mb-4 bg-accent1 px-[12px] py-2 flex flex-col justify-center items-start rounded-[4px] cursor-pointer w-fit hover:scale-[0.9] transition-all duration-150 ease-in"
           >
             <p className="description text-white opacity-80 mt-2 leading-[120%]">
               Need a Service ?

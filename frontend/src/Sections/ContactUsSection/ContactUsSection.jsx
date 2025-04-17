@@ -59,7 +59,7 @@ const Contactus = () => {
                     </p>
                   </div>
                 </div>
-                <img src={arrow} alt="arrow" className="arrow w-6 h-6" />
+                <img src={arrow} alt="arrow" className="arrow md:w-12 md:h-12 w-6 h-6" />
               </article>
             </section>
           }

@@ -6,7 +6,7 @@ import "./SwiggyBanner.css";
 
 const SwiggyBanner = () => {
   return (
-    <section className="swiggybanner relative flex flex-col justify-center items-start gap-6 px-4 sm:px-8 md:px-[8%] lg:px-[10%] py-6 md:py-10 w-full h-[40vh] lg:h-[50vh] overflow-hidden my-[4%]">
+    <section className="swiggybanner relative flex flex-col justify-center items-start gap-6 px-4 sm:px-8 md:px-[8%] lg:px-[10%] py-6 md:py-10 w-full h-[48vh] lg:h-[58vh] overflow-hidden my-[4%]">
       {/* Content Link */}
       <a
         target="_blank"
@@ -27,14 +27,14 @@ const SwiggyBanner = () => {
         <img
           src={swiggy}
           alt="Swiggy"
-          className="w-[70%] sm:w-[50%] md:w-[40%] lg:w-[40%]"
+          className="w-[50%] sm:w-[70%] md:w-[40%] lg:w-[40%]"
         />
 
         {/* Arrow */}
         <img
           src={arrow}
           alt="Arrow"
-          className="absolute w-[20%] top-[24%] right-[10%] sm:left-[40%]"
+          className="absolute w-[30%] top-[30%] right-[20%] sm:w-[20%] sm:top-[24%] sm:left-[40%]"
         />
       </a>
 

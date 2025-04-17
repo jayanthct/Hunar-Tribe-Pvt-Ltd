@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Button from "../../Components/Button/Button";
 import tyre from "../ImpactSection/Assets/tyre.svg";
 import students from "../ImpactSection/Assets/students.svg";
+import scrap from "../ImpactSection/Assets/scrap.svg";
+import plastic from "../ImpactSection/Assets/plastic.svg";
+import ecployee from "../ImpactSection/Assets/ecployee.svg";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +46,7 @@ const OurServicesSection = () => {
     "Establishing Zero Waste Learning Centers",
     "Upcycling & Sustainability Workshops",
   ];
-  const icon = [tyre, students, students, students, students, students];
+  const icon = [students, tyre, scrap, plastic, ecployee];
   const ytlink = [
     "https://www.youtube.com/embed/nD3oSBv7uxY?si=c-j80lQvQYNP96Kz",
     "https://www.youtube.com/embed/69ZQsBC1fPU?si=iZ7GCh12OTfcTPDr",
@@ -101,7 +104,7 @@ const OurServicesSection = () => {
                 className="icon w-[60%] h-[60%] scale-[0.8]"
               />
             </div>
-            <p className="heading font-bold text-[28px] md:text-[32px] text-accent2 tracking-tight">
+            <p className="heading font-bold text-[28px] md:text-[32px] text-accent2 tracking-tighter">
               {titles[index]}
             </p>
           </motion.div>
